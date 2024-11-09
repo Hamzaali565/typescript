@@ -42,4 +42,17 @@ const returnObj = (): { name: string; isPaid: boolean } => {
   return { name: "32", isPaid: false };
 };
 
+// create your own type
+type User = {
+  name: string;
+  email: string;
+  isPaid: boolean;
+};
+
+function createUserOfmyType(user: User): User {
+  return { name: user.name, email: user.email, isPaid: user.isPaid };
+}
+
+createUserOfmyType({ name: "2", isPaid: false, email: "hamza@gmail.com" });
+
 export {};
