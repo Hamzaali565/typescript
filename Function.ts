@@ -45,7 +45,7 @@ const returnObj = (): { name: string; isPaid: boolean } => {
 // create your own type
 type User = {
   name: string;
-  email: string;
+  email?: string;
   isPaid: boolean;
 };
 
@@ -53,6 +53,6 @@ function createUserOfmyType(user: User): User {
   return { name: user.name, email: user.email, isPaid: user.isPaid };
 }
 
-createUserOfmyType({ name: "2", isPaid: false, email: "hamza@gmail.com" });
+createUserOfmyType({ name: "2", isPaid: false, email: "123" });
 
 export {};
